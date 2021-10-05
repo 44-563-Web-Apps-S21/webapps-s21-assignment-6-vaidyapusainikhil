@@ -15,7 +15,7 @@
         crossorigin="anonymous"></script>
         <style>
             header{
-                color: rgb(4, 0, 255);
+                color: blue;
                 background-color: ivory;
             }
             h2{
@@ -72,9 +72,14 @@
             } else {
                 wrong = wrong + 1
                 alert("Access denied")
+                if(wrong >= 2){
+                document.getElementById("processButton").onclick=function(){alert("Account Locked")}
+                }	
+            }
+            out = document.getElementById("result")
                 out.innerHTML = "Correct:" + correct + ", Wrong:" + wrong
             }
-        }
+        
         function newImage() {
             switch (count) {
                 case 0:
